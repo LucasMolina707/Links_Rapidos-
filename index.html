@@ -1,66 +1,70 @@
-```html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descarga Code39</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Descarga Code39 | IngLucas</title>
     <!-- Carga de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Carga de fuente Inter desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 selection:bg-blue-100 selection:text-blue-900">
+<body class="bg-gradient-to-br from-slate-50 via-slate-100/80 to-blue-50/40 text-slate-800 antialiased min-h-[100dvh] flex flex-col justify-between items-center p-4 sm:p-6 md:p-10 selection:bg-blue-100 selection:text-blue-900">
 
-    <!-- Contenedor Principal (Tarjeta) -->
-    <main class="w-full max-w-md bg-white rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-100 p-8 sm:p-10 text-center transition-all duration-300">
+    <!-- Espaciador superior flexible para centrado vertical óptimo -->
+    <div class="hidden sm:block sm:h-4"></div>
+
+    <!-- Contenedor Principal Responsivo (Tarjeta) -->
+    <main class="w-full max-w-[92vw] sm:max-w-md md:max-w-lg bg-white/95 backdrop-blur-sm rounded-[2rem] shadow-2xl shadow-slate-200/80 border border-slate-200/70 p-6 sm:p-10 md:p-12 text-center transition-all duration-300 my-auto">
         
-        <!-- Ícono decorativo de código de barras / descarga -->
-        <div class="mx-auto mb-6 w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shadow-inner">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <!-- Líneas estilo código de barras -->
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6v12M8 6v12M11 6v12M15 6v12M19 6v12" />
+        <!-- Ícono decorativo de código de barras -->
+        <div class="mx-auto mb-6 sm:mb-7 w-16 h-16 sm:w-20 sm:h-20 bg-blue-50/90 text-blue-600 rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-inner border border-blue-100/80">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5v14M7 5v14M10 5v14M14 5v14M17 5v14M21 5v14" />
             </svg>
         </div>
 
-        <!-- Título Principal -->
-        <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3">
+        <!-- Título Principal con tipografía fluida -->
+        <h1 class="text-[clamp(1.625rem,4vw,2.25rem)] font-extrabold text-slate-900 tracking-tight leading-tight mb-3 sm:mb-4">
             Descarga Code39
         </h1>
 
-        <!-- Descripción breve -->
-        <p class="text-slate-600 text-base leading-relaxed mb-8">
+        <!-- Descripción instructiva clara -->
+        <p class="text-slate-600 text-[clamp(0.95rem,2.5vw,1.1rem)] leading-relaxed max-w-sm mx-auto mb-8 sm:mb-9">
             Haz clic en el siguiente botón para acceder al enlace oficial y descargar el archivo <span class="font-semibold text-slate-800">Code39</span> aquí de forma rápida y segura.
         </p>
 
-        <!-- Botón de Descarga Prominente -->
-        <a href="https://drive.google.com/file/d/1bFBK8GiLaOBPM1HIVhk1VL9LZHPk2OWc/view?usp=drivesdk" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="group inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 rounded-2xl shadow-lg shadow-blue-600/30 hover:shadow-blue-600/40 transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-blue-500/30">
-            <!-- Ícono de descarga -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2.5 transition-transform duration-200 group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            <span>Descargar Code39</span>
-        </a>
+        <!-- Botón de Descarga Prominente y Táctil -->
+        <div class="w-full">
+            <a href="https://drive.google.com/file/d/1bFBK8GiLaOBPM1HIVhk1VL9LZHPk2OWc/view?usp=drivesdk" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="group inline-flex items-center justify-center w-full sm:w-auto min-w-[240px] px-8 py-4 sm:py-4.5 text-base sm:text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 rounded-2xl shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-4 focus:ring-blue-500/30">
+                <!-- Ícono de descarga -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6 mr-2.5 transition-transform duration-200 group-hover:translate-y-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>Descargar Code39</span>
+            </a>
+        </div>
 
         <!-- Nota informativa adicional -->
-        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-center gap-2 text-xs text-slate-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="mt-8 sm:mt-9 pt-6 border-t border-slate-100 flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
             <span>Se abrirá Google Drive en una pestaña nueva</span>
@@ -68,14 +72,13 @@
 
     </main>
 
-    <!-- Pie de página con firma -->
-    <footer class="mt-8 text-center">
+    <!-- Pie de página limpio con firma -->
+    <footer class="w-full py-6 text-center">
         <p class="text-sm text-slate-500">
             Desarrollado por <span class="font-semibold text-slate-800 tracking-tight">IngLucas</span>
-            <span class="block sm:inline sm:ml-1 text-xs text-slate-400">@inglucas.com.co</span>
+            <span class="block sm:inline sm:ml-1.5 text-xs text-slate-400 mt-0.5 sm:mt-0">@inglucas.com.co</span>
         </p>
     </footer>
 
 </body>
 </html>
-```
